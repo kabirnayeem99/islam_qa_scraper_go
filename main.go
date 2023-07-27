@@ -18,7 +18,7 @@ func main() {
 
 	for _, madhab := range madhabs {
 		for page := 1; page < 100; page++ {
-			ScrapeForQuestionsAndLinks(madhab, page, c)
+			scrapingservice.ScrapeForQuestionsAndLinks(madhab, page, c)
 			randomDelay := time.Duration(rand.Intn(27)) * time.Second
 			time.Sleep(randomDelay)
 		}
